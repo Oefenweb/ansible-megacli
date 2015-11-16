@@ -7,7 +7,10 @@
     update_cache: true
     cache_valid_time: 3600
   with_items: megacli_dependencies
-  tags: [configuration, megacli, megacli-dependencies]
+  tags:
+    - configuration
+    - megacli
+    - megacli-dependencies
 
 - name: create (upload) directory
   file:
@@ -16,16 +19,22 @@
     owner: root
     group: root
     mode: 0755
-  tags: [configuration, megacli, megacli-download]
+  tags:
+    - configuration
+    - megacli
+    - megacli-download
 
 - name: upload
   copy:
-    src: var/lib/ansible/megacli/uploads/MegaCli.zip 
-    dest: "{{ megacli_upload_path }}/MegaCli.zip" 
+    src: var/lib/ansible/megacli/uploads/MegaCli.zip
+    dest: "{{ megacli_upload_path }}/MegaCli.zip"
     owner: root
     group: root
     mode: 0644
-  tags: [configuration, megacli, megacli-upload]
+  tags:
+    - configuration
+    - megacli
+    - megacli-upload
 
 - name: create (install) directory
   file:
@@ -34,7 +43,10 @@
     owner: root
     group: root
     mode: 0755
-  tags: [configuration, megacli, megacli-install]
+  tags:
+    - configuration
+    - megacli
+    - megacli-install
 
 - name: install
   unarchive:
@@ -42,4 +54,7 @@
     dest: "{{ megacli_install_path }}"
     creates: "{{ megacli_install_path }}/MegaCli64"
     copy: false
-  tags: [configuration, megacli, megacli-install]
+  tags:
+    - configuration
+    - megacli
+    - megacli-install
