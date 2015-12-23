@@ -3,4 +3,4 @@
 megacli_dependencies:
   - unzip
 megacli_upload_path: /var/lib/ansible/megacli/uploads
-megacli_install_path: /usr/local/bin/megacli
+megacli_install_path: /usr/local/bin
