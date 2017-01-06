@@ -1,6 +1,6 @@
 ## megacli
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-megacli.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-megacli) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-megacli-blue.svg)](https://galaxy.ansible.com/list#/roles/5958)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-megacli.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-megacli) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-megacli-blue.svg)](https://galaxy.ansible.com/tersmitten/megacli)
 
 Install LSI MegaRAID Linux MegaCLI.
 
