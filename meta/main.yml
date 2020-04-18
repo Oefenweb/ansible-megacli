@@ -1,6 +1,7 @@
 # meta file for megacli
 ---
 galaxy_info:
+  role_name: megacli
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Install LSI MegaRAID Linux MegaCLI
