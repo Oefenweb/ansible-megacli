@@ -2,11 +2,10 @@
 ---
 - name: install dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ megacli_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: "{{ megacli_dependencies }}"
   tags:
     - configuration
     - megacli
@@ -26,7 +25,7 @@
 
 - name: upload
   copy:
-    src: var/lib/ansible/megacli/uploads/MegaCli.zip
+    src: "{{ megacli_upload_path.lstrip('/') }}/MegaCli.zip"
     dest: "{{ megacli_upload_path }}/MegaCli.zip"
     owner: root
     group: root
