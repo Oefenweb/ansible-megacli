@@ -1,6 +1,7 @@
-# meta file for megacli
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: megacli
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

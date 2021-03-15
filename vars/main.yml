@@ -1,4 +1,4 @@
-# vars file for megacli
+# vars file
 ---
 megacli_dependencies:
   - unzip
