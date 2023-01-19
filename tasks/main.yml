@@ -1,7 +1,7 @@
 # tasks file
 ---
-- name: install dependencies
-  apt:
+- name: install dependencies  # noqa args[module]
+  ansible.builtin.apt:
     name: "{{ megacli_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
@@ -12,7 +12,7 @@
     - megacli-dependencies
 
 - name: create (upload) directory
-  file:
+  ansible.builtin.file:
     path: "{{ megacli_upload_path }}"
     state: directory
     owner: root
@@ -24,7 +24,7 @@
     - megacli-download
 
 - name: upload
-  copy:
+  ansible.builtin.copy:
     src: "{{ megacli_upload_path.lstrip('/') }}/MegaCli.zip"
     dest: "{{ megacli_upload_path }}/MegaCli.zip"
     owner: root
@@ -36,7 +36,7 @@
     - megacli-upload
 
 - name: install
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ megacli_upload_path }}/MegaCli.zip"
     dest: "{{ megacli_install_path }}"
     creates: "{{ megacli_install_path }}/MegaCli64"
