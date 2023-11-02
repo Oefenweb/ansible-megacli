@@ -23,7 +23,7 @@ None
 ---
 - hosts: all
   roles:
-    - megacli
+    - oefenweb.megacli
 ```
 
 #### License
